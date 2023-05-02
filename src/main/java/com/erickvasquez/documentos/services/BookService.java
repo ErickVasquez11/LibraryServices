@@ -1,8 +1,10 @@
 package com.erickvasquez.documentos.services;
 
+import com.erickvasquez.documentos.models.entities.Book;
+
 import java.util.List;
 
-import com.erickvasquez.documentos.models.entities.Book;
+
 
 public interface BookService {
 	// Save, delete, getOneById, getAll

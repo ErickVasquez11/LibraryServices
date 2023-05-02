@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+//import org.springframework.web.bind.annotation.RequestParam;
 
 import com.erickvasquez.documentos.models.dtos.SaveBookDTO;
 import com.erickvasquez.documentos.models.entities.Book;
@@ -61,7 +62,7 @@ public class LibraryController {
 	    	
 	    	System.out.println(bookInfo);
 	    	
-	    	Book newBook = new Book(bookInfo.getIsbn(), bookInfo.getTitle());
+	    	Book newBook = new Book(bookInfo.getIsbn(), bookInfo.getTitle(), bookInfo.getOwner());
 	    	bookService.save(newBook);
 	    	
 	    	return "redirect:/library/all";
